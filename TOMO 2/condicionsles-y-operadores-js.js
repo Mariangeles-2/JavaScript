@@ -15,3 +15,11 @@ console.log(2 == '2'); // true
 
 //===
 console.log(2 === '2'); // false
+
+//!=
+console.log(2 != '3'); // true
+
+//!==
+console.log(2 !== '2'); // true
+
+console.log(3 < 4); // true console.log(5 >= 5); // true
