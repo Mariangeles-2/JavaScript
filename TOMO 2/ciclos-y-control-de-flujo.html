@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciclos y control de flujos</title>
+</head>
+<body>
+<header>
+    <h1>Ciclos y Control de Flujos</h1>
+</header>
+<main>
+    <h2>Introducción a Ciclos</h2>
+
+    <h3>Ciclos en JavaScript</h3>
+    <p>En JavaScript, los ciclos o bucles permiten repetir una o más instrucciones de manera eficiente hasta que se cumpla una condición específica.</p>
+    <p>A continuación, exploraremos los tres tipos principales de ciclos: for, while, y do...while.</p>
+
+    <h3>Ciclo For</h3>
+    <p>El ciclo for es uno de los más utilizados para ejecutar un bloque de código un número determinado de veces. Su estructura incluye tres partes principales:</p>
+    <ul>
+        <li>Inicialización: Establece el estado del contador, por ejemplo, let i = 0.</li>
+        <li>Condición: El ciclo se ejecuta mientras la condición sea verdadera. Por ejemplo, i < 10.</li>
+        <li>Actualización: Actualiza el valor del contador después de cada iteración. Por ejemplo, i++.</li>
+    </ul>
+    <h4>Ejemplo de Ciclo For</h4>
+    <p>Este código imprimirá los números del 0 al 4 en la consola.</p>
+
+    <h3>Ciclo While</h3>
+    <p>El ciclo while sigue ejecutándose mientras la condición especificada sea verdadera. A diferencia del ciclo for, la inicialización y actualización del contador suelen hacerse fuera y dentro del ciclo, respectivamente.</p>
+    <h4>Ejemplo de Ciclo While</h4>
+    <p>Este código también imprimirá los números del 0 al 4.</p>
+
+    <h3>Ciclo Do...While</h3>
+    <p>A diferencia del ciclo while, el ciclo do...while garantiza que el cuerpo del bucle se ejecute al menos una vez, ya que la condición se evalúa después de la ejecución del código dentro del bucle.</p>
+
+    <h4>Ejemplo de Ciclo Do...While</h4>
+    <p>Este código imprimirá los números del 0 al 4, asegurando que el bloque de código se ejecute al menos una vez.</p>
+
+    <h3>Conclusión</h3>
+    <p>Los ciclos son herramientas poderosas en JavaScript que facilitan la escritura de código eficiente y conciso para tareas repetitivas. Cada tipo de ciclo tiene sus propias características y casos de uso óptimos, permitiendo a los desarrolladores elegir el más adecuado según la necesidad específica.</p>
+
+    <h2>Controlando Ciclos</h2>
+
+    <h2>Uso de break y continue</h2>
+    <h3>Introducción</h3>
+    <p>En JavaScript, los bucles son estructuras que repiten bloques de código. Dentro de estos ciclos, las declaraciones break y continue permiten manejar el flujo de ejecución de formas más flexibles y potentes. Aquí veremos cómo y cuándo utilizar estas declaraciones para controlar los ciclos eficazmente.</p>
+
+    <h3>Uso de break</h3>
+    <p>La declaración break se utiliza para salir de un ciclo de forma inmediata, sin importar si la condición del ciclo sigue siendo verdadera.</p>
+    <h4>Ejemplo con break</h4>
+    <p><b>Contexto de uso:</b> break es útil cuando necesitas detener el ciclo en una condición particular, por ejemplo, cuando se encuentra un valor específico en un array.</p>
+
+    <h3>Uso de continue</h3>
+    <p>La declaración continue omite la iteración actual del ciclo y continua con la siguiente, siempre y cuando la condición del ciclo siga siendo verdadera.</p>
+    <h4>Ejemplo con continue</h4>
+    <p><b>Contexto de uso:</b> continue es efectivo en casos donde solo algunas condiciones específicas requieren que el ciclo se omita, como saltarse valores especiales o erróneos dentro de una secuencia de datos.</p>
+
+    <h3>Consideraciones Importantes</h3>
+    <p><b>Lugar de uso:</b>Ambas declaraciones se pueden usar en todos los tipos de ciclos (for, while, do...while).</p>
+
+    <p><b>Control del flujo:</b> Ayudan a hacer el código más claro y fácil de entender al manejar casos especiales sin anidar demasiadas condiciones.</p>
+
+    <p><b>Prevención de bucles infinitos:</b> Es crucial actualizar las variables de control de los bucles cuando se utilizan break o continue para evitar ciclos sin fin.</p>
+
+    <h3>Conclusión</h3>
+    <p>break y continue son herramientas poderosas que ofrecen control preciso sobre la ejecución de los ciclos en JavaScript. Su uso adecuado permite construir aplicaciones más eficientes y códigos más legibles, adaptando el flujo de los programas a cualquier necesidad específica que surja durante el desarrollo.</p>
+
+    <script src="ciclos-y-control-de-flujo.js"></script>
+</main>
+<footer>
+    <button><a href="../indice.html">Anterior</a></button>
+</footer>
+</body>
+</html>
