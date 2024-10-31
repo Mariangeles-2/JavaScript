@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nullish Coalescing</title>
+</head>
+<body>
+<header>
+    <h1>Nullish Coalescing y Condiciones Anidadas</h1>
+</header>
+<main>
+    <h2>Explorando Nullish Coalescing</h2>
+    <p>En JavaScript, el manejo de valores que pueden ser null o undefined es una tarea común. Para facilitar esta
+        tarea, se introdujo el operador Nullish Coalescing (??). Este operador proporciona una forma más limpia y
+        legible de asignar valores predeterminados en casos donde una variable puede tener un valor nulo o
+        indefinido.</p>
+
+    <p>El operador Nullish Coalescing (??) es un operador lógico que retorna el operando de la derecha si el operando de
+        la izquierda es null o undefined. En caso contrario, retorna el operando de la izquierda.</p>
+
+    <h3>Sintaxis</h3>
+    <p>a es evaluado y si es diferente de null o undefined, se convierte en el resultado.</p>
+    <p>Si a es null o undefined, se evalúa y retorna b.</p>
+
+    <p><b># Diferencias con el Operador OR (||)</b></p>
+    <p>El operador OR (||) es comúnmente usado para asignar valores predeterminados antes de que ?? fuera introducido.
+        Sin embargo, || tiene un comportamiento diferente en cómo trata valores que son "falsy" (como 0, '' (cadena
+        vacía), y false).</p>
+
+    <h4>Ejemplo Comparativo</h4>
+    <p>- **Con ||: Retorna "valor predeterminado" porque 0 es considerado como un valor falsy.</p>
+
+    <p>Con ??: Retorna 0 porque 0 no es ni null ni undefined.</p>
+
+    <h4>Casos de Uso Prácticos</h4>
+    <p>Asignación de Valores Predeterminados</p>
+    <p>En este ejemplo, si inputUsuario no ha sido definido (es decir, es undefined), entonces nombreUsuario se asignará
+        como "Invitado".</p>
+
+    <h4>Manejo de Configuraciones de Aplicación</h4>
+    <p>Imagina una aplicación que puede configurar una cantidad máxima de elementos a mostrar:</p>
+    <p>Aquí, a pesar de que el usuario establece que no quiere mostrar elementos (0), el operador ?? permite respetar
+        esta configuración y no usar el valor predeterminado (10), que es lo que habría ocurrido si usáramos ||.</p>
+
+    <h3>Conclusión</h3>
+    <p>El operador Nullish Coalescing (??) es una adición valiosa a JavaScript, especialmente cuando se trata de
+        configuraciones y entradas opcionales. Permite un código más claro y expresivo, evitando errores comunes que
+        ocurren con el operador OR (||) cuando se manejan valores falsy pero válidos como 0 o cadenas vacías.</p>
+    <script src="nullish-coalescing.js"></script>
+</main>
+<footer>
+    <button><a href="../indice.html">Anterior</a></button>
+</footer>
+</body>
+</html>
