@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope</title>
+</head>
+<body>
+<header>
+    <h1>Scope</h1>
+</header>
+<main>
+    <h2>Concepto de Scope</h2>
+    <p>En JavaScript, el scope o ámbito de una variable define la parte del código donde esta variable está disponible para ser utilizada. Comprender el scope es fundamental para manejar adecuadamente la asignación y la visibilidad de las variables, evitando errores y comportamientos inesperados en los programas.</p>
+
+    <h3>Scope Global</h3>
+    <p>Cuando una variable se declara fuera de cualquier función o bloque, tiene un scope global. Esto significa que puede ser accesible desde cualquier parte del código, después de su declaración./p>
+    <h4>Ejemplo Scope Global</h4>
+
+    <p>Sin embargo, usar variables globales puede llevar a conflictos, especialmente en proyectos grandes, ya que cualquier parte del código puede cambiar su valor.</p>
+
+    <h3>Scope Local</h3>
+    <p>Por otro lado, una variable puede tener un scope local, restringido al bloque o función donde se declara. JavaScript define principalmente dos tipos de scope local:</p>
+    <ul>
+        <li>Scope de Función: Variables declaradas dentro de una función no son accesibles fuera de ella. Esto incluye funciones declaradas con function.
+            <p>function establecerColor() {</p>
+            <p>let color = 'rojo'; // Variable local a la función</p>
+            <p>}</p>
+            <p>console.log(color); // Error: color no está definido</p></li>
+        <li>Scope de Bloque: Introducido con las palabras clave let y const en ES6, permite limitar el scope de una variable al bloque en el que se declara, como en ciclos o condicionales.
+            <p>if (true) {</p>
+            <p>let color = 'verde'; // Scope de bloque</p>
+            <p>}</p>
+            <p>console.log(color); // Error: color no está definido</p></li>
+    </ul>
+
+    <h3>Importancia del Scope</h3>
+    <p>Entender y utilizar correctamente los scopes global y local es crucial por varias razones:</p>
+    <ul>
+        <li>Seguridad: Minimiza la posibilidad de errores por modificaciones no intencionadas de variables.</li>
+        <li>Mantenibilidad: Facilita el seguimiento de dónde y cómo se modifican las variables.</li>
+        <li>Eficiencia en la gestión de memoria: Las variables locales se destruyen una vez que el bloque o función ha terminado su ejecución, liberando recursos.</li>
+    </ul>
+
+    <h3>Conclusión</h3>
+    <p>Al desarrollar en JavaScript, es esencial gestionar adecuadamente el scope de las variables para construir aplicaciones robustas y fáciles de mantener. Evitar el uso excesivo de variables globales y aprovechar los scopes de función y bloque son prácticas recomendadas que conducen a un código más limpio y seguro.</p>
+</main>
+<footer>
+  <button><a href="../indice.html">Anterior</a></button>
+</footer>
+</body>
+</html>
