@@ -1,19 +1,161 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Funciones Anónimas y Flecha</title>
 </head>
+
 <body>
-<header>
+    <header>
+        <h1>Funciones Anónimas y Flecha</h1>
+    </header>
+    <main>
+        <h2>Funciones Anónimas</h2>
+        <p>Una función anónima, como su nombre indica, es una función que no tiene un nombre asociado. Este tipo de funciones son útiles especialmente en contextos donde la función se utiliza como un valor que se puede pasar como argumento a otras funciones, o asignar a variables, y no es necesario referenciarla directamente por un nombre.</p>
 
-</header>
-<main>
+        <h3>Sintaxis Básica</h3>
+        <p>La sintaxis de una función anónima es similar a la de cualquier función en JavaScript, con la excepción de que no se le asigna un nombre.</p>
 
-</main>
-<footer>
-    <button><a href="../indice.html">Anterior</a></button>
-</footer>
+        <h4>Ejemplo</h4>
+        <p>const ejemplo = function(a, b) {</p>
+        <p>return a + b;</p>
+        <p>};</p>
+
+        <p>En este caso, la función anónima realiza una suma simple y se asigna a la variable ejemplo. La función puede ser invocada utilizando el nombre de la variable:</p>
+
+        <h4>Ejemplo</h4>
+        <p>console.log(ejemplo(5, 3)); // Salida: 8</p>
+
+        <h3>Usos Comunes</h3>
+        <p>Las funciones anónimas son especialmente populares en JavaScript debido a su utilidad en varios patrones de diseño, incluyendo:</p>
+        <ul>
+            <li>Callbacks: Son frecuentemente usadas como callbacks para manejar eventos o realizar operaciones asincrónicas. Por ejemplo, en el manejo de eventos en el DOM</li>:
+            document.getElementById("miBoton").addEventListener("click", function() { alert("¡Botón pulsado!"); });
+            <li>IIFE (Immediately Invoked Function Expressions): Las expresiones de función invocadas inmediatamente son una forma de ejecutar funciones anónimas tan pronto como se definen, útil para crear un alcance privado:
+            </li>
+            (function() { let temporal = "No accesible fuera de esta función"; console.log("Ejecutada al instante!");
+            })();
+            <li>Funciones de paso en métodos de array como map y filter:</li>
+            jsx let numeros = [1, 2, 3, 4]; let dobles = numeros.map(function(num) { return num * 2; });
+        </ul>
+
+        <h3>Ventajas:</h3>
+        <ul>
+            <li>Flexibilidad para definir funciones sin necesidad de nombrarlas, lo que es útil en casos donde el nombre de la función no se reutiliza.</li>
+            <li>Facilidad para escribir código conciso y legible cuando se usan como callbacks o en patrones de diseño específicos.</li>
+        </ul>
+
+        <h3>Desventajas:</h3>
+        <ul>
+            <li>La depuración puede ser más complicada, ya que las funciones anónimas no tienen nombre, lo que puede hacer más difícil rastrear errores.</li>
+            <li>No pueden ser llamadas recursivamente por sí mismas, ya que no tienen un identificador asociado.</li>
+        </ul>
+
+        <h2>Funciones Flecha</h2>
+
+        <p>Las funciones flecha en JavaScript son una forma concisa de escribir funciones anónimas que no requieren la palabra clave function. Introducidas en ES6 (ECMAScript 2015), ofrecen una sintaxis más corta y solucionan algunos inconvenientes comunes asociados con las funciones tradicionales.</p>
+
+        <h3>Sintaxis Básica</h3>
+        <p>La sintaxis de una función flecha es notablemente más corta y se escribe utilizando el símbolo =&gt;. Aquí un ejemplo básico comparando con una función tradicional:</p>
+
+        <h3>Función Tradicional:</h3>
+        <h4>Ejemplo</h4>
+
+        const sumar = function(a, b) {
+        return a + b;
+        };
+
+        <h3>Función Flecha:</h3>
+        <h4>Ejemplo</h4>
+
+        const sumar = (a, b) =&gt; a + b;
+
+        <p>Si la función solo tiene una expresión, como en el ejemplo anterior, se puede omitir el return y las llaves {}. Esto se llama retorno implícito.</p>
+
+        <h3>Cuándo Usarlas</h3>
+        <p>Las funciones flecha son especialmente útiles en estas situaciones:</p>
+        <ul>
+            <li>Callbacks: Son menos verbosas, ideales para funciones de callback en métodos de arrays como map, filter, y reduce.</li>
+            jsx const numeros = [1, 2, 3, 4]; const cuadrados = numeros.map(n => n * n);
+            <li>Programación Funcional: Debido a su brevedad y funcionalidad, son excelentes para la programación funcional.</li>
+        </ul>
+
+        <h3>Diferencias Clave con Funciones Tradicionales</h3>
+        <ul>
+            <li>this vinculado léxicamente: En las funciones tradicionales, el valor de this depende de cómo se llama a la función. En las funciones flecha, this está vinculado al contexto en el que la función fue creada, lo cual es útil en métodos de clase y callbacks.</li>
+            <li>No hay objeto arguments: Las funciones flecha no tienen acceso al objeto arguments de JavaScript. Esto puede simplificar el comportamiento ya que se deben usar parámetros explícitos o el operador de propagación ... para acceder a los argumentos.</li>
+            <li>No adecuadas como métodos: Las funciones flecha no son adecuadas para usar como métodos en objetos si se planea acceder al objeto a través de this.</li>
+            <li>No hay constructor: Las funciones flecha no pueden usarse como constructores y arrojarán un error si se intenta usar con new.</li>
+        </ul>
+
+        <h3>Ventajas:</h3>
+        <ul>
+            <li>Sintaxis más corta y clara: Reduce el desorden y mejora la legibilidad del código.</li>
+            <li>this no varía: Reduce los errores comunes en el manejo de this dentro de callbacks.</li>
+        </ul>
+
+        <h3>Desventajas:</h3>
+        <ul>
+            <li>Limitaciones en el uso de this: No pueden acceder al this de su propio contexto, lo que puede ser limitante en ciertos patrones de diseño.</li>
+        </ul>
+
+        <h2>Funciones anónimas vs flecha</h2>
+
+        <h2>Funciones Anónimas</h2>
+        <p>Son funciones sin nombre asignado, útiles para ser asignadas a variables o pasadas como argumentos. A diferencia de las funciones flecha, tienen su propio contexto de this, lo que es útil en métodos de objeto donde this debe apuntar al objeto mismo.</p>
+
+        <h4>Ejemplo</h4>
+        <p>const ejemplo = function(a, b) {</p>
+        <p>return a + b;</p>
+        <p>};</p>
+
+        <h3>Ventajas:</h3>
+        <ul>
+            <li>Control completo sobre el contexto de this.</li>
+            <li>Capacidad para acceder al objeto arguments.</li>
+        </ul>
+
+        <h3>Desventajas:</h3>
+        <ul>
+            <li>Sintaxis más extensa.</li>
+            <li>Menos intuitivas para manejar this en callbacks.</li>
+        </ul>
+
+        <h2>Funciones Flecha</h2>
+        <p>Introducidas en ES6 para facilitar la escritura de funciones compactas y resolver problemas de this en callbacks. No tienen su propio this, lo que evita que cambie dentro de su bloque.</p>
+
+        <h4>Ejemplo</h4>
+
+        <p>const suma = (a, b) =&gt; a + b;</p>
+
+        <h3>Ventajas:</h3>
+        <ul>
+            <li>Sintaxis concisa, ideal para retornos directos.</li>
+            <li>Heredan this del entorno, lo que simplifica su uso en métodos de array y callbacks.</li>
+        </ul>
+
+        <h3>Desventajas:</h3>
+        <ul>
+            <li>No aptas como constructores.</li>
+            <li>No tienen acceso al objeto arguments.</li>
+        </ul>
+
+        <h3>Recomendaciones de Uso</h3>
+        <ul>
+            <li>Funciones Anónimas: Útiles en métodos de objetos donde this debe apuntar al objeto que contiene el método, o cuando se necesita un número indeterminado de argumentos.</li>
+            <li>Funciones Flecha: Recomendadas para callbacks y funciones que requieren un contexto this fijo, como en operaciones de array o cuando el this externo necesita ser preservado.</li>
+        </ul>
+
+        <h3>Conclusión</h3>
+        <p>Elegir entre una función anónima y una flecha depende del contexto de uso específico, especialmente enrelación con cómo se maneja this y la claridad del código. Las funciones flecha son preferibles para código más limpio y moderno, mientras que las funciones anónimas son esenciales cuando se requiere un manejo dinámico de this.</p>
+
+        <script src="js/funciones-anonimas-y-flecha.js"></script>
+    </main>
+    <footer>
+        <button><a href="../indice.html">Anterior</a></button>
+    </footer>
 </body>
+
 </html>
