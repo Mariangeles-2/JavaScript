@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos y Propiedades</title>
+</head>
+
+<body>
+    <header>
+        <h1>Métodos y Propiedades</h1>
+    </header>
+    <main>
+        <h2>Métodos de Modificación</h2>
+        <p>Los arrays son estructuras de datos fundamentales en JavaScript, utilizadas para almacenar colecciones de
+            elementos. A continuación, exploramos cuatro métodos esenciales para manipular arrays: push, pop, shift, y
+            unshift, acompañados de ejemplos prácticos para cada uno.</p>
+
+        <h3>Método push</h3>
+        <p>El método push añade uno o más elementos al final de un array. Este método modifica el array original y
+            devuelve la nueva longitud del array.</p>
+
+        <h3>Método pop</h3>
+        <p>El método pop elimina el último elemento de un array y lo devuelve. Este método cambia la longitud del array.
+        </p>
+
+        <h3>Método shift</h3>
+
+        <p>El método shift elimina el primer elemento del array y lo devuelve, desplazando todos los elementos restantes
+            a una posición inferior.</p>
+
+        <h3>Método unshift</h3>
+        <p>El método unshift añade uno o más elementos al inicio del array y devuelve la nueva longitud del array.</p>
+
+        <h2>Métodos de Búsqueda</h2>
+
+        <h3>Métodos indexOf e includes</h3>
+        <p>En JavaScript, los métodos indexOf e includes son herramientas esenciales para buscar elementos dentro de
+            arrays. Estos métodos proporcionan maneras eficientes de localizar la presencia y posición de elementos,
+            facilitando el manejo de datos y la toma de decisiones en el código.</p>
+
+        <h3>Método indexOf</h3>
+        <p>El método indexOf devuelve el primer índice en el que se puede encontrar un elemento dado en el array, o -1
+            si el elemento no está presente. Es útil para localizar la posición exacta de un elemento y es sensible a
+            tipos de datos, es decir, diferencia entre números, strings, etc.</p>
+
+        <h3>Casos de uso:</h3>
+        <ul>
+            <li>Validación de entrada: Verificar si un elemento ya existe antes de agregarlo a un array.</li>
+            <li>Localización de elementos para su manipulación: Determinar la posición para actualizar o eliminar un
+                elemento</li>
+        </ul>
+
+        <h3>Método includes</h3>
+        <p>El método includes determina si un array contiene un determinado elemento, retornando true o false según
+            corresponda.
+            Este método no proporciona la posición del elemento, sino solo la confirmación de su existencia, lo que lo
+            hace ideal
+            para condiciones y verificaciones rápidas.</p>
+
+        <h3>Casos de uso:</h3>
+        <ul>
+            <li>Condiciones: Ejecutar código basado en la presencia de un elemento en un array.</li>
+            <li>Filtrado de opciones: Verificar rápidamente la inclusión de elementos sin preocuparse por su ubicación
+                exacta.</li>
+        </ul>
+
+        <h3>Resumen</h3>
+        <p>Los métodos indexOf e includes son cruciales para el manejo de arrays en JavaScript, ofreciendo tanto la
+            capacidad de localizar la posición exacta de los elementos como de verificar su existencia de forma sencilla
+            y eficaz.
+        </p>
+
+        <h2>Ordenar Arrays</h2>
+
+        <ul>
+            <li>Ordenar Arrays de Números: Para ordenar un array de números, se utiliza el método sort(). Este método
+                toma una función que define el orden. (a, b)
+                => a - b: Esta función resta b de a. Si el resultado es negativo, a se coloca antes que b, lo que
+                significa que se ordenan de menor a mayor.</li>
+            <li>Ordenar Arrays de Palabras: Para ordenar palabras, también se usa sort(), pero con una función
+                diferente, a.localeCompare(b): Esta función compara dos cadenas de texto y las ordena alfabéticamente.
+                Es útil porque tiene en cuenta las mayúsculas y minúsculas.</li>
+            <li>Invertir el Orden de un Array: Si quieres revertir el orden de un array, puedes usar el método
+                reverse(). Esto simplemente invierte el orden de los elementos en el array.</li>
+        </ul>
+
+        <h2>Concatenar Arrays</h2>
+        <h3>Método join en JavaScript para Convertir Arrays en Cadenas de Texto</h3>
+        <p>El método join en JavaScript es una herramienta esencial para convertir un array en una cadena de texto,
+            permitiendo especificar un separador entre los elementos del array. Este método es particularmente útil
+            cuando necesitasunarepresentación en forma de cadena de los datos almacenados en un array, ya sea para
+            mostrar la informaciónen la interfaz de usuario, para logs, o para preparar datos para ser enviados a un
+            servidor.</p>
+
+        <p>join toma un único argumento opcional: el separador, que determina qué string se utiliza para separar los
+            elementos del array en la nueva cadena resultante. Si no se proporciona un separador, los elementos se
+            concatenarán con una coma (,). Si el separador es una cadena vacía (''), los elementos se concatenarán sin
+            ningún espacio entre ellos.</p>
+
+        <h4>Ejemplos Prácticos</h4>
+        <ol>
+            <li>Uso básico con coma (default)</li>
+            <li>Uso con separador de espacio</li>
+            <li>Uso con separador de guión</li>
+            <li>Uso con separador vacío</li>
+        </ol>
+        <h3>Casos de Uso</h3>
+        <ul>
+            <li>Formato de visualización: Transformar un array de datos en una forma legible para ser mostrada en
+                interfaces de usuario
+                o en documentos.</li>
+            <li>Preparación de datos para envío: Convertir arrays a strings para ser enviados a través de peticiones de
+                red donde solo
+                se pueden enviar strings.</li>
+            <li>Logs y depuración: Facilitar la revisión de datos en desarrollo, permitiendo ver fácilmente el contenido
+                de arrays
+                complejos.</li>
+        </ul>
+
+        <script src="js/metodos-y-propiedades.js"></script>
+    </main>
+    <footer>
+        <button><a href="../indice.html">Anterior</a></button>
+    </footer>
+</body>
+
+</html>
