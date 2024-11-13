@@ -163,4 +163,4 @@
 // console.log("Flecha: " + resultadoFlecha);
 
 
-// Tarea para la casa: todo lo que se hizo con función tradicional, lo vamos a hacer con función anónima y/o función flecha
+// Tarea para la casa: lo que se hizo con función tradicional, lo vamos a hacer con función anónima y/o función flecha
