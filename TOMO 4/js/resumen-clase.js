@@ -173,7 +173,7 @@ let arrayDePrueba = ["Javier", "José", "Agata", "Mariangeles", "Alejandra", "Da
 
 /*
 
-Tenemos que hacer un simulador de algún sitio web que nos resuelva un problema. Dentro de este simulador, tenemos que incluir todo lo visto hasta el momento. Además, lo que agregamos tiene que estar relacionado entre sí. Qué quiere decir esto? Si hacen un for para mostrar tablas de multiplicar y un if para validar un logueo, ESTÁ MAL. 
+Tenemos que hacer un simulador de algún sitio web que nos resuelva un problema. Dentro de este simulador, tenemos que incluir lo visto hasta el momento. Además, lo que agregamos tiene que estar relacionado entre sí. Qué quiere decir esto? Si hacen un for para mostrar tablas de multiplicar y un if para validar un logueo, ESTÁ MAL. 
 
 Red flags:
 
