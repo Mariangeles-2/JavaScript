@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage: Guardar/title>
+</head>
+
+<body>
+    <header>
+        <h1>LocalStorage: Guardar</h1>
+    </header>
+    <main>
+        <h2>Introducción a Storage</h2>
+        <p>Las API de almacenamiento web: localStorage y sessionStorage</p>
+        <p>El almacenamiento web proporciona métodos y protocolos para almacenar datos de manera local en el navegador
+            del usuario.
+            Las dos principales herramientas que ofrece son: localStorage y sessionStorage.</p>
+        <ul>
+            <li>localStorage: Permite almacenar datos de forma indefinida hasta que sean explícitamente eliminados por
+                el usuario o por
+                el sitio web que los guardó. Los datos persisten incluso después de cerrar el navegador y reiniciar el
+                sistema.</li>
+            <li>sessionStorage: Similar a localStorage en funcionalidad pero con una diferencia clave: los datos
+                almacenados en
+                sessionStorage se eliminan cuando se cierra la pestaña del navegador. Esto significa que los datos
+                persisten durante la
+                sesión de la pestaña, pero no entre sesiones.</li>
+        </ul>
+
+        <h3>Característica</h3>
+        <p>localStorage </p>
+        <p>sessionStorage</p>
+
+        <h3>Persistencia</h3>
+        <p>Permanente hasta eliminación manual o por el sitio </p>
+        <p>Persiste solo durante la sesión de la pestaña del navegador</p>
+
+        <h3>Compartición</h3>
+        <p>Disponible en todas las pestañas y ventanas </p>
+        <p>Disponible solo en la pestaña que creó el almacenamiento</p>
+
+        <h3>Uso típico</h3>
+        <p>Guardar preferencias del usuario a largo plazo </p>
+        <p>Guardar información sobre el estado de la sesión actual</p>
+
+        <h3>localStorage es ideal para:</h3>
+        <ul>
+            <li>Guardar preferencias de usuario que no requieren ser borradas al cerrar el navegador.</li>
+            <li>Almacenar datos para el autocompletado de formularios en visitas futuras.</li>
+            <li>Guardar tokens de autenticación y configuraciones para uso a largo plazo.</li>
+        </ul>
+
+        <h3>sessionStorage se recomienda para:</h3>
+        <ul>
+            <li>Información que debe desaparecer después de la sesión, como datos de un formulario en progreso en una
+                compra o
+                configuraciones temporales de visualización.</li>
+            <li>Datos sensibles que no deben persistir más allá de la sesión actual, como detalles de una transacción
+                financiera.</li>
+        </ul>
+
+        <h4>Ejemplo práctico</h4>
+
+        <p>Utilizar estas herramientas adecuadamente permite mejorar la experiencia del usuario manteniendo la
+            información
+            necesaria al alcance sin recurrir a servidor, optimizando así la performance y recursos del sistema.</p>
+
+        <h2>Guardar datos en LocalStorage</h2>
+        <h3>Almacenamiento de Datos en localStorage con setItem</h3>
+        <p>El objeto localStorage es una herramienta poderosa para almacenar datos directamente en el navegador del
+            usuario, lo que
+            permite preservar información entre sesiones de navegación. A continuación, exploraremos cómo utilizar el
+            método setItem
+            para guardar diferentes tipos de datos, como cadenas de texto (strings) y números.</p>
+
+        <h3>Uso Básico de setItem</h3>
+        <p>El método setItem de localStorage permite guardar pares clave-valor, donde tanto la clave como el valor deben
+            ser
+            cadenas de texto. La sintaxis general es:</p>
+
+        <p>localStorage.setItem('clave', 'valor');</p>
+
+        <h4>Ejemplos de Uso</h4>
+
+        <p>Almacenar un número: Aunque localStorage solo puede almacenar cadenas de texto, puedes guardar números como
+            texto y
+            luego convertirlos de vuelta a números cuando los leas</p>
+
+        <p>Almacenar datos complejos (como objetos o arrays): Para guardar objetos o arrays, primero debes convertirlos
+            a una
+            cadena JSON</p>
+
+        <h3>Consideraciones al usar localStorage</h3>
+        <ul>
+            <li>Limitación de Tipo: localStorage solo almacena cadenas. Cualquier otro tipo de dato, incluidos los
+                números, booleanos o arrays, debe ser convertido a cadena antes de almacenarse y revertido a su tipo
+                original al ser leído.
+            </li>
+
+            <li>Seguridad: No es seguro almacenar datos sensibles, como información de autenticación o datos personales,
+                porque el localStorage es accesible desde el cliente y podría ser leído por cualquier script en la
+                página.</li>
+
+            <li>Capacidad de Almacenamiento: localStorage tiene una capacidad limitada (aproximadamente 5MB por
+                dominio), por lo que es importante gestionar lo que se almacena y evitar guardar grandes cantidades de
+                datos.</li>
+        </ul>
+
+        <p>El uso efectivo de localStorage con el método setItem puede mejorar significativamente la experiencia del
+            usuario al permitir la personalización y la persistencia del estado entre sesiones de navegación.</p>
+
+        <script src="js/local-storage.js"></script>
+    </main>
+    <footer>
+        <button><a href="../indice.html">Anterior</a></button>
+    </footer>
+</body>
+
+</html>
